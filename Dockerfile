@@ -5,7 +5,7 @@ COPY mvnw pom.xml ./
 RUN chmod +x mvnw
 
 RUN mkdir -p /root/.m2 && mkdir /root/.m2/repository
-COPY settings.xml /root/.m2
+
 
 RUN ./mvnw dependency:go-offline
 COPY ./src ./src
